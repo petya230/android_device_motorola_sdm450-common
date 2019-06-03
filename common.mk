@@ -22,7 +22,7 @@
 # definition file).
 #
 
-$(call inherit-product, vendor/motorola/sdm660-common/sdm660-common-vendor.mk)
+# $(call inherit-product, vendor/motorola/sdm450-common/sdm450-common-vendor.mk)
 
 # Properties
 -include $(LOCAL_PATH)/vendor_prop.mk
@@ -40,7 +40,7 @@ PRODUCT_PACKAGES += \
     android.hardware.soundtrigger@2.0-service \
     audiod \
     audio.a2dp.default \
-    audio.primary.sdm660 \
+    audio.primary.msm8953 \
     audio.r_submix.default \
     audio.usb.default \
     libaudio-resampler \
@@ -63,17 +63,19 @@ PRODUCT_PACKAGES += \
     libbt-vendor
 
 # Boot control HAL
-PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl \
-    android.hardware.boot@1.0-service
+#PRODUCT_PACKAGES += \
+#    android.hardware.boot@1.0-impl \
+#    android.hardware.boot@1.0-service
 
 # Camera
+#android.hardware.camera.provider@2.4-service
+#camera.device@3.2-impl
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service \
-    camera.device@3.2-impl \
     libbson.vendor \
     libxml2 \
+    android.hardware.camera.provider@2.4-service \
+    camera.device@3.2-impl \
     Snap
 
 # Dalvik
@@ -94,10 +96,10 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@2.0-impl \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service \
-    copybit.sdm660 \
-    gralloc.sdm660 \
-    hwcomposer.sdm660 \
-    memtrack.sdm660 \
+    copybit.msm8953 \
+    gralloc.msm8953 \
+    hwcomposer.msm8953 \
+    memtrack.msm8953 \
     libdisplayconfig \
     libgenlock \
     liboverlay \
@@ -162,24 +164,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ims-ext-common
 
-# Init
-PRODUCT_PACKAGES += \
-    fstab.qcom \
-    init.mmi.ramdump.rc \
-    init.mmi.usb.rc \
-    init.mmi.usb.sh \
-    init.qcom.rc \
-    init.power.rc \
-    init.class_main.sh \
-    init.qcom.early_boot.sh \
-    init.qcom.power.sh \
-    init.qcom.post_boot.sh \
-    init.qcom.sensors.sh \
-    init.qcom.sh \
-    init.qti.qseecomd.sh \
-    ueventd.qcom.rc \
-    move_time_data.sh \
-    wlan_carrier_bin.sh
+    #init.power.rc \
 
 # IPACM
 PRODUCT_PACKAGES += \
@@ -203,7 +188,7 @@ PRODUCT_COPY_FILES += \
 
 # LED packages
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.sdm660
+    android.hardware.light@2.0-service.sdm450
 
 # LineageActions
 PRODUCT_PACKAGES += \
@@ -216,6 +201,7 @@ PRODUCT_PACKAGES += \
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
+    $(LOCAL_PATH)/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml \
     $(LOCAL_PATH)/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
     $(LOCAL_PATH)/media/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
@@ -301,11 +287,6 @@ PRODUCT_PACKAGES += \
     rcs_service_api \
     rcs_service_api.xml
 
-# Recovery
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/recovery/root/init.recovery.qcom.rc:root/init.recovery.qcom.rc \
-    $(LOCAL_PATH)/recovery/root/init.recovery.qcom.usb.rc:root/init.recovery.qcom.usb.rc
-
 # RenderScript HAL
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
@@ -341,7 +322,7 @@ PRODUCT_PACKAGES += \
 
 # Thermal
 PRODUCT_PACKAGES += \
-    android.hardware.thermal@1.1-service.sdm660
+    android.hardware.thermal@1.1-service.sdm450
 
 # Touchscreen
 PRODUCT_PACKAGES += \
@@ -362,7 +343,7 @@ PRODUCT_PACKAGES += \
 # VNDK
 # Update this list with what each blob is actually for
 # libicuuc: vendor.qti.hardware.qteeconnector@1.0-impl
-# libstdc++: camera.sdm660
+# libstdc++: camera.sdm450
 PRODUCT_PACKAGES += \
     libicuuc.vendor \
     libstdc++.vendor \

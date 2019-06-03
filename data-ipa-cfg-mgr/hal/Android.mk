@@ -26,6 +26,5 @@ LOCAL_SHARED_LIBRARIES := libhwbinder \
                         android.hardware.tetheroffload.control@1.0
 LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/inc
 LOCAL_VENDOR_MODULE := true
-LOCAL_MODULE_PATH_32 := $(TARGET_OUT_VENDOR)/lib
-LOCAL_MODULE_PATH_64 := $(TARGET_OUT_VENDOR)/lib64
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib
 include $(BUILD_SHARED_LIBRARY)
