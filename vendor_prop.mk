@@ -117,6 +117,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.build.version.qcom=LA.UM.7.6.r1-03700-89xx.0 \
     persist.vold.ecryptfs_supported=true \
     ro.build.vendorprefix=/vendor \
+    wifi.interface=wlan0 \
     sdm.debug.disable_skip_validate=1 \
     ro.emulate_fbe=false \
     dalvik.vm.heapstartsize=8m \
