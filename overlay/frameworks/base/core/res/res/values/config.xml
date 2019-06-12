@@ -207,19 +207,19 @@
     <!-- Vibrator pattern for feedback about a long screen/key press -->
     <integer-array name="config_longPressVibePattern">
         <item>0</item>
-        <item>17</item>
+        <item>20</item>
     </integer-array>
 
     <!-- Vibrator pattern for feedback about touching a virtual key -->
     <integer-array name="config_virtualKeyVibePattern">
         <item>0</item>
-        <item>28</item>
+        <item>26</item>
     </integer-array>
 
     <!-- Vibrator pattern for a very short but reliable vibration for soft keyboard tap -->
     <integer-array name="config_keyboardTapVibePattern">
         <item>0</item>
-        <item>17</item>
+        <item>20</item>
     </integer-array>
 
     <!-- Vibrator pattern for feedback about hitting a scroll barrier -->
@@ -313,24 +313,26 @@
     <bool translatable="false" name="config_wifi_turn_off_during_emergency_call">true</bool>
 
     <!-- MMS user agent string -->
-    <string name="config_mms_user_agent" translatable="false">motox4</string>
+    <string name="config_mms_user_agent" translatable="false">motog6</string>
 
     <!-- MMS user agent prolfile url -->
-    <string name="config_mms_user_agent_profile_url">http://uaprof.motorola.com/phoneconfig/motox4/Profile/motox4.rdf</string>
+    <string name="config_mms_user_agent_profile_url">http://uaprof.motorola.com/phoneconfig/motog6/Profile/motog6.rdf</string>
 
     <!-- Flag indicating if the speed up audio on mt call code should be executed -->
     <bool name="config_speed_up_audio_on_mt_calls">true</bool>
 
     <!-- Default list of files pinned by the Pinner Service -->
     <string-array translatable="false" name="config_defaultPinnerServiceFiles">
-        <item>"/system/framework/boot-framework.oat"</item>
-        <item>"/system/framework/boot-framework.vdex"</item>
-        <item>"/system/framework/oat/services.odex"</item>
-        <item>"/system/framework/oat/services.vdex"</item>
-        <item>"/system/framework/boot.oat"</item>
-        <item>"/system/framework/boot.vdex"</item>
-        <item>"/system/framework/boot-core-libart.oat"</item>
-        <item>"/system/framework/boot-core-libart.vdex"</item>
+        <item>"/system/framework/arm/boot-framework.oat"</item>
+	<item>"/system/framework/arm/boot-framework.vdex"</item>
+	<item>"/system/framework/oat/arm/services.odex"</item>
+	<item>"/system/framework/oat/arm/services.vdex"</item>
+	<item>"/system/framework/arm/boot.oat"</item>
+	<item>"/system/framework/arm/boot.vdex"</item>
+	<item>"/system/framework/arm/boot-core-libart.oat"</item>
+	<item>"/system/framework/arm/boot-core-libart.vdex"</item>
+        <item>/system/framework/arm/boot-telephony-common.oat</item>
+        <item>/system/framework/arm/boot-telephony-common.vdex</item>
     </string-array>
 
     <!-- True if camera app should be pinned via Pinner Service -->
@@ -359,8 +361,5 @@
 
     <!-- Enable ACS (auto channel selection) for Wifi hotspot (SAP) -->
     <bool translatable="false" name="config_wifi_softap_acs_supported">true</bool>
-
-    <!-- Enable 802.11ac for Wifi hotspot (SAP) -->
-    <bool translatable="false" name="config_wifi_softap_ieee80211ac_supported">true</bool>
 
 </resources>
