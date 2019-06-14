@@ -67,14 +67,9 @@ PRODUCT_PACKAGES += \
 #    android.hardware.boot@1.0-service
 
 # Camera
-#android.hardware.camera.provider@2.4-service
-#camera.device@3.2-impl
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.4-impl \
     libbson.vendor \
     libxml2 \
-    android.hardware.camera.provider@2.4-service \
-    camera.device@3.2-impl \
     Snap
 
 # Dalvik
