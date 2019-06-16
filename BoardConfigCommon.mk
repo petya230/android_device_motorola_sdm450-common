@@ -155,7 +155,7 @@ TARGET_KERNEL_ARCH := arm
 TARGET_PROVIDES_LIBLIGHT := true
 
 # Lineage hardware
-JAVA_SOURCE_OVERLAYS := org.lineageos.hardware|$(PLATFORM_PATH)/lineagehw|**/*.java
+#JAVA_SOURCE_OVERLAYS := org.lineageos.hardware|$(PLATFORM_PATH)/lineagehw|**/*.java
 
 # Partitions
 #BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
