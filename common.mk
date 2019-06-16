@@ -161,11 +161,11 @@ PRODUCT_PACKAGES += \
     #init.power.rc \
 
 # IPACM
-PRODUCT_PACKAGES += \
-    ipacm \
-    IPACM_cfg.xml \
-    libipanat \
-    liboffloadhal
+#PRODUCT_PACKAGES += \
+#    ipacm \
+#    IPACM_cfg.xml \
+#    libipanat \
+#    liboffloadhal
 
 # IPv6 tethering
 PRODUCT_PACKAGES += \
@@ -194,6 +194,7 @@ PRODUCT_PACKAGES += \
 
 # Network
 PRODUCT_PACKAGES += \
+    android.system.net.netd@1.0 \
     netutils-wrapper-1.0
 
 # Permissions
