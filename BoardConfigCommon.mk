@@ -156,7 +156,7 @@ TARGET_PROVIDES_LIBLIGHT := true
 
 # Lineage hardware
 #TARGET_USES_PREBUILT_VENDOR_SEPOLICY := true
-#JAVA_SOURCE_OVERLAYS := org.lineageos.hardware|$(PLATFORM_PATH)/lineagehw|**/*.java
+JAVA_SOURCE_OVERLAYS := org.lineageos.hardware|$(PLATFORM_PATH)/lineagehw|**/*.java
 
 # Partitions
 #BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
