@@ -333,6 +333,8 @@
 	<item>"/system/framework/arm/boot-core-libart.vdex"</item>
         <item>/system/framework/arm/boot-telephony-common.oat</item>
         <item>/system/framework/arm/boot-telephony-common.vdex</item>
+        <item>/system/framework/arm/boot-telephony-ext.oat</item>
+        <item>/system/framework/arm/boot-telephony-ext.vdex</item>
     </string-array>
 
     <!-- True if camera app should be pinned via Pinner Service -->
