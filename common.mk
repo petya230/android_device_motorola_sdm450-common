@@ -152,11 +152,11 @@ PRODUCT_PACKAGES += \
     #init.power.rc \
 
 # IPACM
-#PRODUCT_PACKAGES += \
-#    ipacm \
-#    IPACM_cfg.xml \
-#    libipanat \
-#    liboffloadhal
+PRODUCT_PACKAGES += \
+    ipacm \
+    IPACM_cfg.xml \
+    libipanat \
+    liboffloadhal
 
 # IPv6 tethering
 PRODUCT_PACKAGES += \

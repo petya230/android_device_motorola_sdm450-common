@@ -311,6 +311,15 @@
         </interface>
     </hal>
     <hal format="hidl">
+        <name>android.hardware.usb.gadget</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IUsbGadget</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
         <name>android.hardware.vibrator</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -764,7 +773,7 @@
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
-            <name>IMotHealth</name>
+            <name>IHealth</name>
             <instance>default</instance>
         </interface>
     </hal>

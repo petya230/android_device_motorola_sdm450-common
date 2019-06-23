@@ -132,9 +132,6 @@ TARGET_FS_CONFIG_GEN += \
     $(PLATFORM_PATH)/config.fs \
     $(PLATFORM_PATH)/mot_aids.fs
 
-# IPA
-USE_DEVICE_SPECIFIC_DATA_IPA_CFG_MGR := true
-
 # Kernel
 # * cmdline = console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=30 msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 firmware_class.path=/vendor/firmware_mnt/image loop.max_part=7 vmalloc=400M buildvariant=user
 #BOARD_INCLUDE_DTB_IN_BOOTIMG := true
