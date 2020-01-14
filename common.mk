@@ -176,8 +176,8 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.sdm450
 
 # LineageActions
-PRODUCT_PACKAGES += \
-    LineageActions
+#PRODUCT_PACKAGES += \
+#    LineageActions
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
