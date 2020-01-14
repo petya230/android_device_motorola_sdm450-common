@@ -244,8 +244,8 @@ PRODUCT_PACKAGES += \
     libstagefrighthw
 
 # Power
-PRODUCT_PACKAGES += \
-    android.hardware.power@1.0-service-qti
+#PRODUCT_PACKAGES += \
+#    android.hardware.power@1.0-service-qti
 
 # QMI
 PRODUCT_PACKAGES += \
