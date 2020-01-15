@@ -134,9 +134,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
 
 # Health
-PRODUCT_PACKAGES += \
-    android.hardware.health@2.0-impl \
-    android.hardware.health@2.0-service
+#PRODUCT_PACKAGES += \
+#    android.hardware.health@2.0-impl \
+#    android.hardware.health@2.0-service
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -273,9 +273,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp/mediaextractor-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy
 
 # Sensors
-PRODUCT_PACKAGES += \
-    android.hardware.sensors@1.0-impl \
-    android.hardware.sensors@1.0-service
+#PRODUCT_PACKAGES += \
+#    android.hardware.sensors@1.0-impl \
+#    android.hardware.sensors@1.0-service
 
 # Shims
 PRODUCT_PACKAGES += \
