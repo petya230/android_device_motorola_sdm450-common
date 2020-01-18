@@ -1,2 +1,89 @@
 #============= vold ==============
 allow vold system_data_file:file { ioctl open };
+allow vold vendor_file:dir { ioctl open };
+
+#============= cameraserver ==============
+allow cameraserver init:binder { transfer call };
+
+#============= hal_nfc_default ==============
+allow hal_nfc_default default_android_hwservice:hwservice_manager add;
+
+#============= healthd ==============
+allow healthd sysfs:file { read getattr open };
+
+#============= hwservicemanager ==============
+allow hwservicemanager init:binder call;
+allow hwservicemanager init:file { read open };
+allow hwservicemanager init:process getattr;
+allow hwservicemanager init:dir { search };
+
+#============= init ==============
+allow init cameraserver:binder transfer;
+allow init default_android_hwservice:hwservice_manager { add find };
+allow init hal_camera_hwservice:hwservice_manager add;
+allow init hal_graphics_composer_default:binder { call };
+allow init hal_light_hwservice:hwservice_manager { add };
+#allow init hal_lineage_livedisplay_hwservice:hwservice_manager { add };
+allow init hal_thermal_hwservice:hwservice_manager { add };
+allow init qdisplay_service:service_manager { find };
+allow init sysfs:file { write };
+allow init sysfs_graphics:file { open };
+allow init vendor_file:file { execute_no_trans };
+allow init hidl_base_hwservice:hwservice_manager { add };
+allow init hwservicemanager:binder { transfer call };
+allow init sysfs:file { open setattr };
+allow init sysfs_graphics:file { write };
+allow init shell_exec:file { execute_no_trans };
+allow init vndbinder_device:chr_file { read };
+
+
+#============= system_server ==============
+allow system_server block_device:blk_file { read getattr open ioctl };
+allow system_server dalvikcache_data_file:file { execute };
+allow system_server init:binder { call };
+allow system_server sysfs:file { read };
+allow system_server sysfs:file { open };
+allow system_server sysfs:file { getattr };
+
+#============= vendor_init ==============
+allow vendor_init firmware_file:dir { setattr };
+allow vendor_init usermodehelper:file { write };
+allow vendor_init device:file { write create };
+allow vendor_init firmware_file:dir { create };
+allow vendor_init qti_debugfs:file { write };
+allow vendor_init rootfs:dir { add_name };
+allow vendor_init device:file { write create };
+allow vendor_init firmware_file:dir { create };
+allow vendor_init rootfs:dir { write };
+
+#============= vold ==============
+allow vold vendor_file:dir { read };
+allow vold vendor_file:dir { open };
+
+#============= zygote ==============
+allow zygote proc_cmdline:file { read };
+
+#============= installd ==============
+allow installd oemfs:filesystem { quotaget };
+
+#============= hal_audio_default ==============
+allow hal_audio_default mnt_vendor_file:file { read };
+allow hal_audio_default mnt_vendor_file:file { getattr open };
+
+#============= hal_fingerprint_fpc ==============
+allow hal_fingerprint_fpc vendor_data_file:dir { write add_name };
+allow hal_fingerprint_fpc vendor_data_file:file { create open append };
+allow hal_fingerprint_fpc vendor_data_file:file { setattr };
+
+#============= thermalserviced ==============
+allow thermalserviced init:binder { transfer call };
+
+#============= logpersist ==============
+allow logpersist cache_file:dir { read write open };
+allow logpersist self:capability { dac_override };
+
+#============= toolbox ==============
+allow toolbox self:capability { dac_override };
+
+#============= ueventd ==============
+allow ueventd block_device:blk_file { read open };
